@@ -1,0 +1,17 @@
+---
+title: "Mass Data"
+author: "Jacob Hardin-Bernhardt"
+format: html
+---
+```{r}
+#| echo: false
+#| message: false
+#| label: setup
+
+library(tidyverse)
+mass_data<-read.csv("mass-tracts.csv")
+mass_data |> 
+  ggplot(x=med_income,y=race)+
+  geom_point()
+```
+
